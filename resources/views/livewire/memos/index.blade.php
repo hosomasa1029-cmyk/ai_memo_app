@@ -9,6 +9,13 @@ state(['memos' => fn() => Memo::where('user_id', auth()->id())->get()]);
 
 <div>
     <div class="max-w-7xl mx-auto p-6 lg:p-8">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">メモ一覧</h1>
+            <a href="{{ route('memos.create') }}"
+                class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                新規作成
+            </a>
+        </div>
         <div class="mt-16">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 @foreach ($memos as $memo)

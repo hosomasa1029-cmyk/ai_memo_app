@@ -22,7 +22,7 @@ $save = function () {
     $memo->body = $validated['body'];
     $memo->save();
 
-    $this->redirect('/memos', navigate: true);
+    $this->redirect(route('memos.show', $memo), navigate: true);
 };
 
 ?>
