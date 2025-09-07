@@ -18,6 +18,7 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 
+    Volt::route('memos', 'memos.index')->name('memos.index');
     Volt::route('memos/{memo}', 'memos.show')->name('memos.show');
 });
 
